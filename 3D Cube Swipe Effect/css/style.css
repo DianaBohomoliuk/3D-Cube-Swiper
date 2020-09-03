@@ -1,0 +1,85 @@
+html,body{
+    position: relative;
+    height: 100%;
+    background-color: rgb(28, 30, 31);
+}
+body{
+    margin: 0;
+}
+.swiper-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.swiper-slide {
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 8em 3em;
+    color: rgb(255, 251, 245);
+}
+h1{
+    font-size: 4em;
+    line-height: 1em;
+}
+p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-top: 7em;
+
+}
+h1::before{
+   content: '';
+   position: absolute;
+   top: 1em;
+   width: 50%;
+   height: 40%;
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
+
+
+}
+.slide1{
+    background-image: url('/hometasks/3D Cube Swipe Effect/assets/img/image_part_001.jpg');
+}
+    .slide1 h1::before{
+        border-left: 1px solid white;
+        right: 0;
+    }
+.slide2{
+    background-image: url('/hometasks/3D Cube Swipe Effect/assets/img/image_part_002.jpg');
+}
+    .slide2 h1::before{
+        border-right: 1px solid white;
+        left: 0;
+    }
+    .slide2 h1::after{
+        border-left: 1px solid white;
+        right: 0;
+        content: '';
+        position: absolute;
+        top: 1em;
+        width: 10%;
+        height: 40%;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+.slide3{
+    background-image: url('/hometasks/3D Cube Swipe Effect/assets/img/image_part_003.jpg');
+}
+.slide3 h1::before{
+        border-right: 1px solid white;
+        left: 0;
+    }
+
+.prevBtn, .nextBtn{
+    color: rgb(226, 214, 214);
+    outline: none;
+    top: 80%;
+    transition: .8s;
+}
+.prevBtn:hover{
+    transform: translateX(-5px);
+}
+.nextBtn:hover{
+    transform: translateX(5px);
+}
